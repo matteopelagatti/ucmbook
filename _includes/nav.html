@@ -1,0 +1,7 @@
+<ul class="nav-list">
+  {% for item in site.navigation %}
+    <li>
+      <a href="{{ item.url | prepend: site.baseurl }}"{% if item.url == page.url %} class="active"{% endif %}>{{ item.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

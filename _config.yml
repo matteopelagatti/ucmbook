@@ -17,5 +17,5 @@ navigation:
     url: /data/
     nav_order: 2
   - title: Code
-    url: /codes/
+    url: /code/
     nav_order: 3
