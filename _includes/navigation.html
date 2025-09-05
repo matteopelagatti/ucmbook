@@ -1,16 +1,7 @@
 <nav>
   <ul>
     {% for item in site.data.navigation %}
-      {% assign is_active = false %}
-
-      {% comment %} --- Logic to determine the active page --- {% endcomment %}
-      {% if item.url == '/' and page.url == '/' %}
-        {% assign is_active = true %}
-      {% elsif item.url != '/' and page.url | startswith: item.url %}
-        {% assign is_active = true %}
-      {% endif %}
-
-      <li {% if is_active %}class="active"{% endif %}>
+      <li {% if page.url == item.url %}class="active"{% endif %}>
         <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
       </li>
     {% endfor %}
