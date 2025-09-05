@@ -1,8 +1,11 @@
 ---
-layout: default
-title: Codes
+layout: page
+title: Code
 permalink: /codes/
+nav_order: 3
 ---
+
+![Header]({ site.baseurl }/assets/images/header.jpg)
 
 # Code
 

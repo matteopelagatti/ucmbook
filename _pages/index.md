@@ -1,7 +1,11 @@
 ---
-layout: default
+layout: page
 title: Home
+permalink: /
+nav_order: 1
 ---
+
+![Header]({ site.baseurl }/assets/images/header.jpg)
 
 # Time Series Modelling with Unobserved Components
 
