@@ -1,8 +1,15 @@
 <nav>
   <ul>
     {% for item in site.data.navigation %}
-      <li {% if page.url == item.url %}class="active"{% endif %}>
-        <a href="{{ item.url }}">{{ item.title }}</a>
+      {% assign is_active = false %}
+      {% if page.url == item.url %}
+        {% assign is_active = true %}
+      {% elsif item.url != '/' and page.url startswith item.url %}
+        {% assign is_active = true %}
+      {% endif %}
+
+      <li {% if is_active %}class="active"{% endif %}>
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
       </li>
     {% endfor %}
   </ul>
