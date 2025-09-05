@@ -6,8 +6,16 @@ nav_order: 3
 nav: true
 ---
 
-![Header]({{ site.baseurl }}/assets/images/header.jpg)
-
 # Code
 
-Here you can find the code used in the book, plus some extra code.
+Here you can find the code used in the book, plus some extra scripts.
+
+## R/KFAS
+
+## Ox/SsfPack
+
+## EViews
+
+## SAS
+
+## Stata
