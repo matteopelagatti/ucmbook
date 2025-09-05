@@ -2,7 +2,9 @@
   <ul>
     {% for item in site.data.navigation %}
       {% assign is_active = false %}
-      {% if page.url == item.url %}
+
+      {% comment %} --- Logic to determine the active page --- {% endcomment %}
+      {% if item.url == '/' and page.url == '/' %}
         {% assign is_active = true %}
       {% elsif item.url != '/' and page.url | startswith: item.url %}
         {% assign is_active = true %}
