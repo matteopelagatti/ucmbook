@@ -5,7 +5,7 @@ permalink: /
 nav_order: 1
 ---
 
-![Header]({ site.baseurl }/assets/images/header.jpg)
+![Header]({{ site.baseurl }}/assets/images/header.jpg)
 
 # Time Series Modelling with Unobserved Components
 
