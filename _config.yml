@@ -3,6 +3,7 @@ description: The official book's website
 baseurl: "/ucmbook"
 url: "https://matteopelagatti.github.io"
 theme: jekyll-theme-cayman
+show_downloads: false
 markdown: kramdown
 highlighter: rouge
 collections:
