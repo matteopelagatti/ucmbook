@@ -6,23 +6,25 @@ nav_order: 1
 nav: true
 ---
 
+# UNDER CONSTRUCTION
+Sorry for the inconvenience: the former hosting service just deleted the book's website, and I am making a new one using GitHub Pages.
 
-# Welcome
+## Welcome
 
 Welcome to the official book's website.  
-Here you'll find datasets, code, and extra resources related to the book.
+Here you will find datasets, code, and extra resources related to the book.
 
 ## Book Description
 
 [Matteo M. Pelagatti (2015) *Time Series Modelling with Unobserved Components*. Chapman and Hall/CRC. ISBN: 978-1482225006](https://www.routledge.com/Time-Series-Modelling-with-Unobserved-Components/Pelagatti/p/book/9781032098432)
 
-Despite the unobserved components model (UCM) having many advantages over more popular forecasting techniques based on regression analysis, exponential smoothing, and ARIMA, the UCM is not well known among practitioners outside the academic community. Time Series Modelling with Unobserved Components rectifies this deficiency by giving a practical overview of the UCM approach, covering some theoretical details, several applications, and the software for implementing UCMs.
+Despite the unobserved components model (UCM) having many advantages over more popular forecasting techniques based on regression analysis, exponential smoothing, and ARIMA, the UCM remains relatively unknown among practitioners outside the academic community. Time Series Modelling with Unobserved Components rectifies this deficiency by giving a practical overview of the UCM approach, covering some theoretical details, several applications, and the software for implementing UCMs.
 
-The book’s first part discusses introductory time series and prediction theory. Unlike most other books on time series, this text includes a chapter on prediction at the beginning because the problem of predicting is not limited to the field of time series analysis.
+The book's first part discusses introductory time series and prediction theory. Unlike most other books on time series, this text includes a chapter on prediction at the beginning because the problem of prediction is not limited to the field of time series analysis.
 
-The second part introduces the UCM, the state space form, and related algorithms. It also provides practical modeling strategies to build and select the UCM that best fits the needs of time series analysts.
+The second part introduces the UCM, the state space form, and related algorithms. It also provides practical modeling strategies for building and selecting the UCM that best fits the needs of time series analysts.
 
-The third part presents real-world applications, with a chapter focusing on business cycle analysis and the construction of band-pass filters using UCMs. The book also reviews software packages that offer ready-to-use procedures for UCMs as well as systems popular among statisticians and econometricians that allow general estimation of models in state space form.
+The third part presents real-world applications, with a chapter focusing on business cycle analysis and the construction of band-pass filters using UCMs. The book also reviews software packages that offer ready-to-use procedures for UCMs, as well as systems popular among statisticians and econometricians that enable the general estimation of models in state-space form.
 
 This book demonstrates the numerous benefits of using UCMs to model time series data. UCMs are simple to specify, their results are easy to visualize and communicate to non-specialists, and their forecasting performance is competitive. Moreover, various types of outliers can easily be identified, missing values are effortlessly managed, and working contemporaneously with time series observed at different frequencies poses no problem.
 
