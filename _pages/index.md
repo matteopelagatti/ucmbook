@@ -29,8 +29,8 @@ This book demonstrates the numerous benefits of using UCMs to model time series 
 
 ## Errata
 
-Download the latest version of the errata.
-Please signal other eventual corrections to matteo.pelagatti@unimib.it
+Download the latest version of the [errata](errata20220523.pdf).
+Please signal other eventual corrections to [matteo.pelagatti@unimib.it].
 
 
 ## Book's Reviews
