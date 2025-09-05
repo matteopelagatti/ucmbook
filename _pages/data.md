@@ -3,6 +3,7 @@ layout: page
 title: Data
 permalink: /data/
 nav_order: 2
+nav: true
 ---
 
 ![Header]({{ site.baseurl }}/assets/images/header.jpg)
