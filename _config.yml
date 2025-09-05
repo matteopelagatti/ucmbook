@@ -2,6 +2,6 @@ title: Time Series Modelling with Unobserved Components
 description: The official book's website
 baseurl: "/ucmbook"
 url: "https://matteopelagatti.github.io"
-remote_theme: aksakalli/jekyll-doc-theme
+remote_theme: aksakalli/jekyll-doc-theme@gh-pages
 markdown: kramdown
 highlighter: rouge
