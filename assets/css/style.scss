@@ -1,0 +1,25 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+/* Add your custom styles here */
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+}
