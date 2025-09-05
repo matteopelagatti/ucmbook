@@ -4,7 +4,7 @@
       {% assign is_active = false %}
       {% if page.url == item.url %}
         {% assign is_active = true %}
-      {% elsif item.url != '/' and page.url startswith item.url %}
+      {% elsif item.url != '/' and page.url | startswith: item.url %}
         {% assign is_active = true %}
       {% endif %}
 
