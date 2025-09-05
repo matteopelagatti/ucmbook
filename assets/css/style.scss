@@ -23,3 +23,29 @@ nav ul li a {
   text-decoration: none;
   color: #333;
 }
+
+/* Style for the active navigation link */
+nav ul li.active a {
+  color: #1e6bb8;
+  font-weight: bold;
+}
+
+/* Custom Header Image */
+.page-header {
+  background-image: url('/assets/images/header.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  // Adjust the padding to change the header's height
+  padding: 5rem 6rem;
+  
+  // Removes the default gradient and border
+  background-color: black;
+  border: none;
+}
+
+/* Hide the default site title and description text */
+.project-name, .project-tagline {
+  display: none;
+}
