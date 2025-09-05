@@ -5,7 +5,7 @@ permalink: /data/
 nav_order: 2
 ---
 
-![Header]({ site.baseurl }/assets/images/header.jpg)
+![Header]({{ site.baseurl }}/assets/images/header.jpg)
 
 # Data
 
