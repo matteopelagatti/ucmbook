@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Code
 permalink: /code/
 nav_order: 3

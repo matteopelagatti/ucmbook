@@ -9,3 +9,13 @@ collections:
   pages:
     output: true
     permalink: /:path/
+navigation:
+  - title: Home
+    url: /
+    nav_order: 1
+  - title: Data
+    url: /data/
+    nav_order: 2
+  - title: Code
+    url: /codes/
+    nav_order: 3
