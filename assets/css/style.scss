@@ -32,13 +32,16 @@ nav ul li.active a {
 
 /* Custom Header Image */
 .page-header {
+  aspect-ratio: 1280 / 395;
   background-image: url({{ '/assets/images/header.jpg' | relative_url }});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   
   // Adjust the padding to change the header's height
-  padding: 5rem 6rem;
+  padding: 0;
+  height: auto;
+  width: 100%;
   
   // Removes the default gradient and border
   background-color: transparent;
