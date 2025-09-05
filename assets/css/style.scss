@@ -52,3 +52,8 @@ nav ul li.active a {
 .project-name, .project-tagline {
   display: none;
 }
+
+/* Hide the "View on GitHub" button */
+.page-header .btn {
+  display: none !important;
+}
