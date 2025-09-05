@@ -5,3 +5,7 @@ url: "https://matteopelagatti.github.io"
 remote_theme: aksakalli/jekyll-doc-theme@gh-pages
 markdown: kramdown
 highlighter: rouge
+collections:
+  pages:
+    output: true
+    permalink: /:path/
