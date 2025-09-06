@@ -10,7 +10,7 @@ nav: true
 
 Here, you can find the datasets used in the book, along with some additional time series.
 
--   [airline.csv]([airline.csv]({{ '/assets/data/airline.csv' | relative_url }}){: download })
+-   [airline.csv]({{ '/assets/data/airline.csv' | relative_url }}){: download })
     -   Description: the famous airline time series from Box and Jenkins' book.
     -   Measurement: number of U.S. airline passengers in thousands.
     -   Frequency: monthly.
