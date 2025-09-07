@@ -43,14 +43,14 @@ nav ul {
   padding: 0;
   text-align: center;
   background-color: #f2f2f2;
-  position: relative;
-  z-index: 100;
+  position: relative; /* Keep this */
+  z-index: 1000;      /* Keep this high */
 }
 
 /* All top-level menu items */
 nav > ul > li {
   display: inline-block;
-  position: relative; /* Crucial for positioning the dropdown */
+  position: relative; 
 }
 
 /* Links in the main bar */
