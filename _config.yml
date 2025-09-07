@@ -1,4 +1,14 @@
 title: Time Series Modelling with Unobserved Components
 description: The official book's website
+
+# The baseurl is critical for your site to work correctly on GitHub Pages
+baseurl: "/ucmbook" 
+
+# The url is your site's main address
+url: "https://matteopelagatti.github.io"
+
 theme: jekyll-theme-cayman
 show_downloads: false
+
+plugins:
+  - jekyll-seo-tag
