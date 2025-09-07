@@ -73,12 +73,12 @@ nav ul li.active > a {
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%; /* Position right below the parent */
+  top: 100%;
   left: 0;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 10; /* Ensures menu is on top */
+  z-index: 999; /* Ensures menu is on top of ALL content */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -99,9 +99,9 @@ nav ul li.active > a {
   background-color: #f1f1f1;
 }
 
-/* Show the dropdown menu when hovering over its parent */
+/* FORCE the dropdown menu to show on hover */
 li.dropdown:hover > .dropdown-menu {
-  display: block;
+  display: block !important; /* Overrides any conflicting styles */
 }
 
 /* Small arrow next to the dropdown title */
