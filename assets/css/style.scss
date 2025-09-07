@@ -30,6 +30,54 @@ nav ul li.active a {
   font-weight: bold !important;
 }
 
+/* --- Dropdown Menu Styles --- */
+
+/* The container for the dropdown */
+nav ul li.dropdown {
+  position: relative; /* This is crucial for positioning the dropdown */
+}
+
+/* The dropdown menu itself (hidden by default) */
+nav ul li .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 4px;
+}
+
+/* Links inside the dropdown */
+nav ul li .dropdown-menu li a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Change color of dropdown links on hover */
+nav ul li .dropdown-menu li a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+nav ul li.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Small arrow next to dropdown title */
+nav ul li.dropdown a span {
+  font-size: 0.7em;
+  margin-left: 5px;
+}
+
 /* Custom Header Image */
 .page-header {
   aspect-ratio: 1280 / 395;

@@ -1,8 +1,27 @@
 <nav>
   <ul>
     {% for item in site.data.navigation %}
-      <li {% if page.url == item.url %}class="active"{% endif %}>
-        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% comment %} --- Logic to determine the active page --- {% endcomment %}
+      {% assign is_active = false %}
+      {% if item.url == '/' and page.url == '/' %}
+        {% assign is_active = true %}
+      {% elsif item.url != '/' and page.url | startswith: item.url %}
+        {% assign is_active = true %}
+      {% endif %}
+
+      <li {% if is_active or (item.sublinks and page.url contains '/code/') %}class="active"{% endif %} {% if item.sublinks %}class="dropdown"{% endif %}>
+        <a href="{{ item.url | default: '#' | relative_url }}">
+          {{ item.title }} {% if item.sublinks %}<span>&#9662;</span>{% endif %}
+        </a>
+        
+        {% comment %} --- Renders the dropdown if it exists --- {% endcomment %}
+        {% if item.sublinks %}
+          <ul class="dropdown-menu">
+            {% for sublink in item.sublinks %}
+              <li><a href="{{ sublink.url | relative_url }}">{{ sublink.title }}</a></li>
+            {% endfor %}
+          </ul>
+        {% endif %}
       </li>
     {% endfor %}
   </ul>

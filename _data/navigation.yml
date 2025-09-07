@@ -1,6 +1,22 @@
 - title: Home
   url: /
+
 - title: Data
   url: /data/
+
 - title: Code
-  url: /code/
+  sublinks:
+    - title: EViews
+      url: /code/eviews/
+    - title: Gretl
+      url: /code/gretl/
+    - title: Ox
+      url: /code/ox/
+    - title: R
+      url: /code/r/
+    - title: SAS
+      url: /code/sas/
+    - title: STAMP
+      url: /code/stamp/
+    - title: Stata
+      url: /code/stata/
