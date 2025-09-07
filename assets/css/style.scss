@@ -43,6 +43,8 @@ nav ul {
   padding: 0;
   text-align: center;
   background-color: #f2f2f2;
+  position: relative;
+  z-index: 100;
 }
 
 /* All top-level menu items */
