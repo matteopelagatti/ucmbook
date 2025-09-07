@@ -3,7 +3,39 @@
 
 @import "{{ site.theme }}";
 
-/* Add your custom styles here */
+/*
+================================================
+Custom Header Styles
+================================================
+*/
+
+.page-header {
+  aspect-ratio: 1280 / 395;
+  background-image: url({{ '/assets/images/header.jpg' | relative_url }});
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0;
+  height: auto;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+}
+
+/* Hide elements in the header */
+.project-name,
+.project-tagline,
+.page-header .btn {
+  display: none !important;
+}
+
+/*
+================================================
+Navigation Menu
+================================================
+*/
+
+/* --- Main Navigation Bar --- */
 
 nav ul {
   list-style-type: none;
@@ -13,40 +45,38 @@ nav ul {
   background-color: #f2f2f2;
 }
 
-nav ul li {
+/* All top-level menu items */
+nav > ul > li {
   display: inline-block;
+  position: relative; /* Crucial for positioning the dropdown */
 }
 
-nav ul li a {
+/* Links in the main bar */
+nav > ul > li > a {
   display: block;
   padding: 15px;
   text-decoration: none;
   color: #333;
 }
 
-/* Highlight style for the active navigation link */
-nav ul li.active a {
-  color: #1e6bb8 !important;
-  font-weight: bold !important;
+/* Highlight for the active/current page link */
+nav ul li.active > a {
+  color: #1e6bb8;
+  font-weight: bold;
 }
 
-/* --- Dropdown Menu Styles --- */
-
-/* The container for the dropdown */
-nav ul li.dropdown {
-  position: relative; /* This is crucial for positioning the dropdown */
-}
+/* --- Dropdown Functionality --- */
 
 /* The dropdown menu itself (hidden by default) */
-nav ul li .dropdown-menu {
+.dropdown-menu {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 100%; /* Position right below the parent */
   left: 0;
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 10; /* Ensures menu is on top */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -54,7 +84,7 @@ nav ul li .dropdown-menu {
 }
 
 /* Links inside the dropdown */
-nav ul li .dropdown-menu li a {
+.dropdown-menu li a {
   color: black;
   padding: 12px 16px;
   text-decoration: none;
@@ -63,50 +93,28 @@ nav ul li .dropdown-menu li a {
 }
 
 /* Change color of dropdown links on hover */
-nav ul li .dropdown-menu li a:hover {
+.dropdown-menu li a:hover {
   background-color: #f1f1f1;
 }
 
-/* Show the dropdown menu on hover */
-nav ul li.dropdown:hover > .dropdown-menu {
+/* Show the dropdown menu when hovering over its parent */
+li.dropdown:hover > .dropdown-menu {
   display: block;
 }
 
-/* Small arrow next to dropdown title */
-nav ul li.dropdown a span {
+/* Small arrow next to the dropdown title */
+li.dropdown a span {
   font-size: 0.7em;
   margin-left: 5px;
 }
 
-/* Custom Header Image */
-.page-header {
-  aspect-ratio: 1280 / 395;
-  background-image: url({{ '/assets/images/header.jpg' | relative_url }});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  
-  // Adjust the padding to change the header's height
-  padding: 0;
-  height: auto;
-  width: 100%;
-  
-  // Removes the default gradient and border
-  background-color: transparent;
-  border: none;
-}
+/*
+================================================
+Main Content Styles
+================================================
+*/
 
-/* Hide the default site title and description text */
-.project-name, .project-tagline {
-  display: none;
-}
-
-/* Hide the "View on GitHub" button */
-.page-header .btn {
-  display: none !important;
-}
-
-/* text header color */
+/* Color for headings in the body */
 .main-content h1,
 .main-content h2,
 .main-content h3,
@@ -115,4 +123,3 @@ nav ul li.dropdown a span {
 .main-content h6 {
   color: darkblue;
 }
-
