@@ -43,8 +43,8 @@ nav ul {
   padding: 0;
   text-align: center;
   background-color: #f2f2f2;
-  position: relative; /* Keep this */
-  z-index: 1000;      /* Keep this high */
+  position: relative;
+  z-index: 1000; /* Puts the nav bar on a very high layer */
 }
 
 /* All top-level menu items */
@@ -69,7 +69,6 @@ nav ul li.active > a {
 
 /* --- Dropdown Functionality --- */
 
-/* The dropdown menu itself (hidden by default) */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -78,14 +77,13 @@ nav ul li.active > a {
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 999; /* Ensures menu is on top of ALL content */
+  z-index: 999;
   list-style: none;
   padding: 0;
   margin: 0;
   border-radius: 4px;
 }
 
-/* Links inside the dropdown */
 .dropdown-menu li a {
   color: black;
   padding: 12px 16px;
@@ -94,17 +92,14 @@ nav ul li.active > a {
   text-align: left;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-menu li a:hover {
   background-color: #f1f1f1;
 }
 
-/* FORCE the dropdown menu to show on hover */
 li.dropdown:hover > .dropdown-menu {
-  display: block !important; /* Overrides any conflicting styles */
+  display: block !important;
 }
 
-/* Small arrow next to the dropdown title */
 li.dropdown a span {
   font-size: 0.7em;
   margin-left: 5px;
@@ -116,7 +111,6 @@ Main Content Styles
 ================================================
 */
 
-/* Color for headings in the body */
 .main-content h1,
 .main-content h2,
 .main-content h3,
@@ -126,7 +120,8 @@ Main Content Styles
   color: darkblue;
 }
 
-/* --- TEMPORARY TEST --- */
-nav > ul > li.dropdown:hover {
-  background-color: red !important;
+/* --- THIS IS THE CRITICAL NEW RULE --- */
+.main-content {
+  position: relative;
+  z-index: 1; /* Puts the content on a lower layer than the nav bar */
 }
