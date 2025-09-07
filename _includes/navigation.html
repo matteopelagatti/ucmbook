@@ -9,12 +9,20 @@
         {% assign is_active = true %}
       {% endif %}
 
-      <li {% if is_active or (item.sublinks and page.url contains '/code/') %}class="active"{% endif %} {% if item.sublinks %}class="dropdown"{% endif %}>
+      {% comment %} --- Build the class string --- {% endcomment %}
+      {% assign li_classes = "" %}
+      {% if is_active or (item.sublinks and page.url contains '/code/') %}
+        {% assign li_classes = li_classes | append: " active" %}
+      {% endif %}
+      {% if item.sublinks %}
+        {% assign li_classes = li_classes | append: " dropdown" %}
+      {% endif %}
+
+      <li class="{{ li_classes | strip }}">
         <a href="{{ item.url | default: '#' | relative_url }}">
           {{ item.title }} {% if item.sublinks %}<span>&#9662;</span>{% endif %}
         </a>
         
-        {% comment %} --- Renders the dropdown if it exists --- {% endcomment %}
         {% if item.sublinks %}
           <ul class="dropdown-menu">
             {% for sublink in item.sublinks %}
