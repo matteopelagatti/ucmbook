@@ -71,7 +71,7 @@ nav ul li.active > a {
 
 /* The dropdown menu itself (hidden by default) */
 .dropdown-menu {
-  display: block;
+  display: none;
   position: absolute;
   top: 100%;
   left: 0;
@@ -124,4 +124,9 @@ Main Content Styles
 .main-content h5,
 .main-content h6 {
   color: darkblue;
+}
+
+/* --- TEMPORARY TEST --- */
+nav > ul > li.dropdown:hover {
+  background-color: red !important;
 }
