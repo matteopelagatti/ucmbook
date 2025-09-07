@@ -1,0 +1,59 @@
+open bjg.gdt       # open airline data
+genr lair = 100*log(g) # create 100 times the log-airline 
+
+# initial values for log of variances
+scalar lvareta = 0
+scalar lvarzeta = 0
+scalar lvaromega = 0
+scalar lvareps = 0
+
+# State equation matrices
+matrix T = zeros(13,13)
+# -- Local linear trend
+T[1,1] = 1
+T[1,2] = 1
+T[2,2] = 1
+# -- Stochastic dummy seasonal c.
+T[3,3:13] = -1
+T[4:13,3:12] = I(10)
+matrix Q = zeros(13,13)
+
+# Observation equation matrices
+matrix Z = zeros(13,1)
+Z[1,1] = 1
+Z[3,1] = 1
+matrix H = {exp(lvareps)}
+
+# Initial conditions
+matrix a1 = zeros(13,1)
+a1[1,1] = lair[1]
+
+# Definition of the state space form 
+kalman
+    obsy lair
+    obsymat Z
+    statemat T
+    obsvar H
+    statevar Q
+    inistate a1
+end kalman --diffuse
+
+# Maximum likelihood estimation
+mle ll = ERR ? NA : $kalman_llt
+    # assign variances to right matrix positions
+    Q[1,1] = exp(lvareta)
+    Q[2,2] = exp(lvarzeta)
+    Q[3,3] = exp(lvaromega)
+    H[1,1] = exp(lvareps)
+    ERR = kfilter()
+    params lvareta lvarzeta lvaromega lvareps
+end mle
+
+# Smoothing
+matrix ret = ksmooth()
+
+# Plot series and trend
+series trend = ret[,1]
+setinfo lair -n "log-airline"
+setinfo trend -n "smoothed trend"
+gnuplot lair trend time --with-lines --output=display
